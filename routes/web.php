@@ -20,3 +20,12 @@ Route::get('/contact', 'PageController@contact')->name('contact');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+Route::resource('/questions', 'QuestionController');
+Route::get('/questions/create','QuestionController@create');
+
+
+Route::resource('/answers', 'AnswersController',['except'=>['index','create','show']]);

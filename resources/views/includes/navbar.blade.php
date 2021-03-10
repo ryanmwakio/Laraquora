@@ -7,8 +7,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item {{ Request::is('/') ? 'active' : '' }}"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-          <li class="nav-item {{ Request::is('todo/create') ? 'active' : '' }}"><a class="nav-link" href="/todo/create">Create Todo</a></li>
-          <li class="nav-item"><a href="#" class="btn btn-primary">Ask A Question</a></li>
+          <li class="nav-item {{ Request::is('/recent') ? 'active' : '' }}"><a class="nav-link" href="/recent">Recent</a></li>
+          <li class="nav-item {{ Request::is('/popular') ? 'active' : '' }}"><a class="nav-link" href="/popular">Popular</a></li>
+          @if (!Auth::check())
+            <li class="nav-item {{ Request::is('/login') ? 'active' : '' }}"><a class="nav-link" href="/login">Login</a></li>
+            <li class="nav-item {{ Request::is('/register') ? 'active' : '' }}"><a class="nav-link" href="/register">Register</a></li>
+          @endif
+          <li class="nav-item"><a href="/questions/create" class="btn btn-primary btn-sm">Ask A Question</a></li>
         </ul>
       </div>
     </div>

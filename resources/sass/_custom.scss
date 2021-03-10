@@ -1,20 +1,17 @@
 @font-face {
     font-family: "Lato-Regular";
     src: url(../fonts/Lato-Regular.ttf);
-
-    }
+}
 
 @font-face {
     font-family: "Montserrat-Regular";
     src: url(../fonts/Montserrat-Regular.otf);
-
-    }
+}
 
 @font-face {
     font-family: "PlayfairDisplay-Regular";
     src: url(../fonts/PlayfairDisplay-Regular.otf);
-
-    }
+}
 
 * {
     margin: 0;
@@ -23,14 +20,57 @@
     border: none;
 }
 
-html,body {
+html,
+body {
     font-family: Montserrat-Regular;
     font-size: 13px;
     background-color: #fff;
-
 }
 
 .navbar {
-    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    position: relative;
 }
 
+.hero {
+    width: 100%;
+    text-align: center;
+    min-height: 75vh;
+    color: $color-white;
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+        ),
+        url(../images/herobg.jpeg);
+    margin-top: -2rem;
+    position: relative;
+}
+
+.vertical-center {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.footer {
+    background: $color-black;
+    width: 100%;
+    padding: 2rem 3rem;
+    margin-bottom: 0;
+}
+
+.pagination-links {
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.border-right {
+    border-right: 3px solid $color-primary !important;
+}
+
+.card {
+    border-radius: 6px !important;
+}

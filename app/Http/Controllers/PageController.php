@@ -12,10 +12,12 @@ class PageController extends Controller
     }
 
     public function about(){
-        return view('about');
+        return 'the about page';
+        // return view('about');
     }
 
     public function contact(){
-        return view('contact');
+        return "the contact page";
+        // return view('contact');
     }
 }

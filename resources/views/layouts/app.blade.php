@@ -18,8 +18,10 @@
     <body>
       @include('includes.navbar')
 
-      <div class="container">
+      <div>
           @yield('content')
       </div>
+
+      @include('includes.footer')
     </body>
 </html>
