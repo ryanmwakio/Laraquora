@@ -5,7 +5,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./jquery.slim.min');
+// require('./jquery.slim.min');
 
 require('./bootstrap');
 

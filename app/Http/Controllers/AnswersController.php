@@ -5,9 +5,15 @@ namespace App\Http\Controllers;
 use App\Answer;
 use App\Question;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AnswersController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -45,6 +51,7 @@ class AnswersController extends Controller
 
             $answer=new Answer();
             $answer->content=$request->content;
+            $answer->user()->associate(Auth::user()->id);
 
             $question=Question::findOrFail($request->question_id);
             $submitAnswer=$question->answers()->save($answer);

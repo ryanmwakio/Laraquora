@@ -4,7 +4,7 @@
             &copy; <script>
             var date=new Date().getFullYear()
             document.write(date);
-            </script> Lara Quora | Ryan Mwakio
+            </script> Ryan Mwakio
         </div>
     </div>
 </footer>

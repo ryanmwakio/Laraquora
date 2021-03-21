@@ -7,13 +7,18 @@
 
         <title>Lara Quora</title>
 
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
-        <link href="{{ asset('images/favi-icon.png') }}" rel="icon">
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+
+        <link href="{{ secure_asset('images/favi-icon.png') }}" rel="icon">
 
 
-        <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
+
+
+        <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('js/tinymce/tinymce.min.js') }}"></script>
     </head>
     <body>
       @include('includes.navbar')

@@ -29,3 +29,7 @@ Route::get('/questions/create','QuestionController@create');
 
 
 Route::resource('/answers', 'AnswersController',['except'=>['index','create','show']]);
+
+Route::get('/profile/{id}', 'PageController@profile')->name('profile');
+
+Route::get('/profile/{id}/delete','PageController@deleteProfile')->name('deleteprofile');

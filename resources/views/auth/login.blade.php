@@ -65,6 +65,10 @@
                             </div>
                         </div>
                     </form>
+                    <div class="container">
+                    <hr>
+                        <p class="text-center">Don't have an account? <a href="/register">register here</a></p>
+                    </div>
                 </div>
             </div>
         </div>
